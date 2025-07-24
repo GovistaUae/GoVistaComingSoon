@@ -1,0 +1,137 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/bg.png'), url('assets/Flight.png');
+  background-size: cover;
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 120px;
+  z-index: 5;
+}
+
+.coming-soon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+  padding: 50px 80px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  z-index: 15;
+}
+
+.content h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.rocket {
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+.content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.social-icons .follow-text {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 10px;
+  color: white;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #1da1f2; /* Blue tint on hover */
+}
+
+/* Optional: different icon colors */
+.social-icons i.fa-twitter { color: #1da1f2; }
+.social-icons i.fa-instagram { color: #e1306c; }
+.social-icons i.fa-facebook { color: #3b5998; }
+.social-icons i.fa-linkedin { color: #0077b5; }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 30px 20px;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content h2 {
+    font-size: 1.3rem;
+  }
+
+  .rocket {
+    width: 120px;
+  }
+
+  .logo {
+    width: 90px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .background-image {
+    background-size: cover, 300px;
+    background-position: center, right 5% top 30%;
+  }
+}
